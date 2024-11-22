@@ -3,6 +3,7 @@
 SyncWrite is a web-based document editor that allows multiple users to collaborate on rich text documents in real-time. The application ensures low-latency synchronization of document changes, efficient conflict resolution, and a seamless user experience. It leverages modern technologies to provide a scalable, secure, and responsive platform for collaborative editing.
 
 > ![NOTE]
+> 
 > This is just outline of project plan. More data to be added sooner. 
 
 ## Tech Stack
