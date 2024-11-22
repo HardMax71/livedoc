@@ -1,0 +1,100 @@
+@use 'bulma/sass/utilities/initial-variables';
+@use 'bulma/sass/utilities/functions';
+
+// Custom color palette
+$primary: #4a90e2;
+$info: #2779bd;
+$success: #38c172;
+$warning: #f6993f;
+$danger: #e3342f;
+
+$grey-light: #b8c2cc;
+$grey-lighter: #f1f5f8;
+$grey: #8795a1;
+$white: #ffffff;
+$black: #000000;
+
+$background: #f8fafc;
+$border: #e2e8f0;
+$border-light: #edf2f7;
+
+$family-sans-serif: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
+$radius: 8px;
+$radius-large: 12px;
+$radius-small: 4px;
+
+@use 'bulma/bulma';
+
+// Custom styles
+.auth-form {
+  .field:not(:last-child) {
+    margin-bottom: 1.75rem;
+  }
+}
+
+.documents-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 2.5rem;
+}
+
+.document-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background-color: $white;
+  border-radius: $radius;
+  box-shadow: 0 4px 6px rgba($black, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba($black, 0.15);
+  }
+
+  .buttons {
+    margin-top: auto;
+    padding: 1rem;
+  }
+}
+
+.hero {
+  background: linear-gradient(135deg, $primary 0%, darken($primary, 20%) 100%);
+  color: $white;
+
+  .title,
+  .subtitle {
+    color: $white;
+    text-shadow: 0 2px 4px rgba($black, 0.1);
+  }
+}
+
+// Transitions
+.fade-enter-active,
+.fade-exit-active {
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.fade-enter,
+.fade-exit-to {
+  opacity: 0;
+  transform: translateY(10px);
+}
+
+// Loading spinner
+.loader {
+  border: 3px solid rgba($primary, 0.3);
+  border-top-color: $primary;
+  border-radius: 50%;
+  width: 3em;
+  height: 3em;
+  animation: spin 1s cubic-bezier(0.55, 0.25, 0.25, 0.7) infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
